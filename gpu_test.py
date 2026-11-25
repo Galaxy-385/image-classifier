@@ -1,5 +1,12 @@
 import torch
 
+"""
+GPU verification script for the image classification project.
+
+This module verifies that PyTorch can detect and use the NVIDIA GPU
+available on the system and performs a simple CUDA computation.
+"""
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 print(f"PyTorch: {torch.__version__}")
